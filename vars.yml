@@ -29,7 +29,7 @@
         msg: URL = {{URL}}
 
 - name: vars from inventory file
-  hosts: localhost
+  hosts: all
   connection: local
   tasks:
     - name: Print URL
