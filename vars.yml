@@ -28,7 +28,7 @@
       ansible.builtin.debug:
         msg: URL = {{URL}}
 
-- name: vars from inventory level
+- name: vars from inventory file
   hosts: localhost
   connection: local
   tasks:
