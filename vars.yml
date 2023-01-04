@@ -18,8 +18,8 @@
 
 - name: Demo on vars from file on play level
   hosts: localhost
-  vars_files:
-   - sample-vars.yml
+  vars_files: # file level
+   - sample-vars.yml #from file to file ie sample to var file
   tasks:
     - name: Print URL
       ansible.builtin.debug:
