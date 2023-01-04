@@ -9,7 +9,7 @@
         msg: URL = {{URL}}
 
 - name: Demo on vars on task level
-  hosts: all
+  hosts: localhost
   connection: local
   tasks:
     - name: Print URL
@@ -19,7 +19,7 @@
           URL: task.example.com
 
 - name: Demo on vars from file on play level
-  hosts: all
+  hosts: localhost
   connection: local
   vars_files: # file
    - sample.yml #from file to file ie sample to var file
@@ -29,7 +29,7 @@
         msg: URL = {{URL}}
 
 - name: vars from inventory level
-  hosts: all
+  hosts: localhost
   connection: local
   tasks:
     - name: Print URL
