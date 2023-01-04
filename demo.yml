@@ -1,6 +1,6 @@
 - name: Demo Book #name of ansible playbook
   hosts: all #allow to all hosts
   tasks:
-    -name: Print Hello
-    ansible.builtin.debug:
-      msg: Hello
+   - name: Print Hello
+     ansible.builtin.debug:
+       msg: Hello
