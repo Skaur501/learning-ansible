@@ -29,8 +29,10 @@
         msg: URL = {{URL}}
 
 - name: vars from inventory file
-  hosts: all
+  hosts: localhost
   connection: local
+  vars_files: # file
+    - inventory.yml
   tasks:
     - name: Print URL
       ansible.builtin.debug:
