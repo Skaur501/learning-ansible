@@ -28,7 +28,7 @@
 - name: Demo on vars on inventory level
   hosts: localhost
   vars_files: # file level
-    - sample.yml #from file to file ie sample to var file
+    - inventory.yml #from file to file ie sample to var file
   tasks:
     - name: Print URL
       ansible.builtin.debug:
