@@ -22,9 +22,16 @@
   hosts: all
   connection: local
   vars_files: # file
-   - inventory.yml #from file to file ie sample to var file
+   - sample.yml #from file to file ie sample to var file
   tasks:
     - name: Print URL
       ansible.builtin.debug:
         msg: URL = {{URL}}
 
+- name: Demo on vars on inventory level
+  hosts: all
+  connection: local
+  tasks:
+    - name: Print URL
+      ansible.builtin.debug:
+        msg: URL = {{URL}}
