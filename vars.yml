@@ -39,8 +39,26 @@
 - name: Access Facts
   hosts: localhost
   connection: local
-  gather_facts: false
+  #gather_facts: false
   tasks:
     - name: Print FACT
       ansible.builtin.debug:
         msg: HOSTNAME = {{ansible_hostname}}
+
+- name: Demo on Runtime variable
+  hosts: localhost
+  connection: local
+  #gather_facts: false
+  tasks:
+    - name: Execute uptime shell command
+      ansible.builtin.shell: uptime
+      register: out
+
+    - name: Set a fact
+      ansible.builtin.set_fact:
+         uptime: "{{out.stdout}}"
+
+    - name: Print out
+      ansible.builtin.debug:
+        uptime: "{{out.stdout}}"
+        msg: "{{uptime}}"
