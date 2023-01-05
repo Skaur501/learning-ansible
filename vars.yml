@@ -55,10 +55,16 @@
       register: out
 
     - name: Set a fact #run time variable
-      ansible.builtin.set_fact:
+      ansible.builtin.set_fact: #set a variable using fact
          uptime: "{{out.stdout}}"
 
     - name: Print out #run time variable
       ansible.builtin.debug:
         #uptime: "{{out.stdout}}"
         msg: "{{out.stdout}}"
+
+- name: vars from Roles
+  hosts: localhost
+  connection: local
+  roles:
+    -sample
