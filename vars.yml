@@ -64,7 +64,7 @@
         msg: "{{out.stdout}}"
 
 - name: Vars Print from roles
-  hosts: localhost
+  hosts: all
   connection: local
   roles:
     -sample
