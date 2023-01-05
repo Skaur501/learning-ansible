@@ -63,7 +63,7 @@
         #uptime: "{{out.stdout}}"
         msg: "{{out.stdout}}"
 
-- name: vars from Roles
+- name: vars print from Roles
   hosts: localhost
   connection: local
   roles:
