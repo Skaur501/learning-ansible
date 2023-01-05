@@ -67,4 +67,4 @@
   hosts: localhost
   connection: local
   roles:
-   -sample
+   - sample
