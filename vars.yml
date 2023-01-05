@@ -50,15 +50,15 @@
   connection: local
   #gather_facts: false
   tasks:
-    - name: Execute uptime shell command
+    - name: Execute uptime shell command #run time variable
       ansible.builtin.shell: uptime
       register: out
 
-    #- name: Set a fact
-     # ansible.builtin.set_fact:
-         #uptime: "{{out.stdout}}"
+    - name: Set a fact #run time variable
+      ansible.builtin.set_fact:
+         uptime: "{{out.stdout}}"
 
-    - name: Print out
+    - name: Print out #run time variable
       ansible.builtin.debug:
         #uptime: "{{out.stdout}}"
         msg: "{{out.stdout}}"
