@@ -61,4 +61,4 @@
     - name: Print out
       ansible.builtin.debug:
         #uptime: "{{out.stdout}}"
-        msg: "{{out}}"
+        msg: "{{out.stdout}}"
