@@ -35,3 +35,11 @@
     - name: Print URL
       ansible.builtin.debug:
         msg: URL = {{URL}}
+
+- name: Access Facts
+  hosts: localhost
+  #connection: local
+  tasks:
+    - name: Print FACT
+      ansible.builtin.debug:
+        msg: HOSTNAME = {{ansible_hostname}}
