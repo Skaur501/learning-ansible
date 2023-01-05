@@ -38,7 +38,7 @@
 
 - name: Access Facts
   hosts: localhost
-  #connection: local
+  connection: local
   tasks:
     - name: Print FACT
       ansible.builtin.debug:
