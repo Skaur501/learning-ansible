@@ -7,3 +7,10 @@
       loop:
         - Orange
         - apple
+
+    - name: Loop on List of fruits and count
+      ansible.builtin.debug:
+        msg: "Fruit name - {{item.name}} , count = {{item.count}}"
+      loop:
+        - {name: "Orange" , count: 100}
+        - {name: "apple" , count: 50}
